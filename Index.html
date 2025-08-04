@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bowlingová Liga</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Bowlingová Liga – Výsledky</h1>
+
+  <section id="team-table">
+    <h2>Tabulka týmů</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tým</th>
+          <th>Zápasy</th>
+          <th>Výhry</th>
+          <th>Prohry</th>
+          <th>Body</th>
+          <th>Průměr</th>
+        </tr>
+      </thead>
+      <tbody id="teams-body"></tbody>
+    </table>
+  </section>
+
+  <section id="players-table">
+    <h2>Výsledky jednotlivců</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Hráč</th>
+          <th>Tým</th>
+          <th>Hry</th>
+          <th>Kuželky</th>
+          <th>Průměr</th>
+        </tr>
+      </thead>
+      <tbody id="players-body"></tbody>
+    </table>
+  </section>
+
+  <button id="open-form">Zadat výsledek</button>
+
+  <section id="input-form" style="display: none;">
+    <h2>Zadat výsledek zápasu</h2>
+    <form id="result-form">
+      <label>Kolo:
+        <input type="number" name="round" min="1" required />
+      </label>
+      <label>Tým A:
+        <select name="teamA" required></select>
+      </label>
+      <label>Tým B:
+        <select name="teamB" required></select>
+      </label>
+
+      <h3>Hráči Tým A</h3>
+      <div id="playersA"></div>
+
+      <h3>Hráči Tým B</h3>
+      <div id="playersB"></div>
+
+      <button type="submit">Uložit výsledek</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
